@@ -1,0 +1,173 @@
+.panel-design {
+    position: relative;
+    padding-top: 120px;
+    // padding-bottom: 50vh;
+    min-height: 100vh;
+    max-height: 100vw;
+    overflow: hidden;
+
+    .header-wrapper {
+
+        .header {
+            padding: 0 24px;
+            display: inline-block;
+            width: 100%;
+            max-width: 480px;
+            @include transform-origin(0 100%);
+            @include transform(rotate(-10deg));
+
+            > * {
+                width: 100%;
+
+                > svg {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    max-width: none;
+                }
+            }
+
+            .logo {
+                max-width: 300px;
+                margin-bottom: 36px;
+            }
+
+            .tagline {
+                max-width: 458px;
+                margin-bottom: rem-calc(36);
+            }
+        }
+    }
+
+    .portfolio {
+        margin-top: -10vh;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 1100px;
+        overflow: hidden;
+        float: right;
+
+        // &:before {
+        //     content: '';
+        //     display: block;
+        //     width: 110vw;
+        //     height: 100vh;
+        //     position: absolute;
+        //     top: 100%;
+        //     left: 0%;
+        //     z-index: 999;
+        //     margin-top: -10%;
+        //     background-color: #1d1f21;
+        //     @include transform-origin(0% 0%);
+        //     @include transform(rotate(-10deg));
+        // }
+
+        > ul {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            @include transform-origin(100% 100%);
+            @include transform(rotate(-10deg));
+
+            &:hover {
+
+                // li:nth-child(1) { @include transform(scale(1) translateY(6%) translateX(0) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(10deg) rotateZ(3deg)); }
+                // li:nth-child(2) { @include transform(scale(1) translateY(12%) translateX(-20%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(10deg) rotateZ(3deg)); }
+                // li:nth-child(3) { @include transform(scale(1) translateY(18%) translateX(-40%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(10deg) rotateZ(3deg)); }
+                // li:nth-child(4) { @include transform(scale(1) translateY(24%) translateX(-60%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(10deg) rotateZ(3deg)); }
+                // li:nth-child(5) { @include transform(scale(1) translateY(28%) translateX(-80%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(10deg) rotateZ(3deg)); }
+            }
+        }
+
+        > ul > li  {
+            position: absolute;
+            top: 0%;
+            right: -700px;
+            height: 100%;
+            width: 100%;
+            max-width: 1200px;
+            @include transform-origin(100% 100%);
+            @include transition(all .3s);
+
+            // &:hover {
+            //     @include box-shadow(-60px 120px 100px rgba(0, 0, 0, .25));
+            // }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                @include box-shadow(-25px 30px 70px rgba(0, 0, 0, .25));
+            }
+
+            $x: -400px;
+            $y: -300px;
+
+            &:nth-child(1) {
+                z-index: 1000;
+                @include transform(translateY(20%) rotate(0deg));
+                // &:hover { @include transform(translateY(20%) translateX(-4%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(2deg)); }
+                // &:hover ~ li:nth-child(2) { @include transform(scale(.95) translateY(12%) translateX(-20%)); }
+                // &:hover ~ li:nth-child(3) { @include transform(scale(.9) translateY(18%) translateX(-40%)); }
+                // &:hover ~ li:nth-child(4) { @include transform(scale(.85) translateY(24%) translateX(-60%)); }
+                // &:hover ~ li:nth-child(5) { @include transform(scale(.8) translateY(28%) translateX(-80%)); }
+            }
+
+            &:nth-child(2) {
+                z-index: 900;
+                @include transform(translateY(30%) translateX(-20%));
+                // &:hover { @include transform(translateY(30%) translateX(-24%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(2deg)); }
+                // &:hover ~ li:nth-child(1) { @include transform(scale(.95) translateY(6%) rotate(0deg)); }
+                // &:hover ~ li:nth-child(3) { @include transform(scale(.95) translateY(18%) translateX(-40%)); }
+                // &:hover ~ li:nth-child(4) { @include transform(scale(.9) translateY(24%) translateX(-60%)); }
+                // &:hover ~ li:nth-child(5) { @include transform(scale(.85) translateY(28%) translateX(-80%)); }
+            }
+
+            &:nth-child(3) {
+                z-index: 800;
+                @include transform(translateY(40%) translateX(-36%));
+                // &:hover { @include transform(translateY(40%) translateX(-44%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(2deg)); }
+                // &:hover ~ li:nth-child(1) { @include transform(scale(.9) translateY(6%) rotate(0deg)); }
+                // &:hover ~ li:nth-child(2) { @include transform(scale(.95) translateY(12%) translateX(-20%)); }
+                // &:hover ~ li:nth-child(4) { @include transform(scale(.95) translateY(24%) translateX(-60%)); }
+                // &:hover ~ li:nth-child(5) { @include transform(scale(.9) translateY(28%) translateX(-80%)); }
+            }
+
+            &:nth-child(4) {
+                z-index: 700;
+                @include transform(translateY(50%) translateX(-46%));
+                // &:hover { @include transform(translateY(50%) translateX(-64%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(2deg)); }
+                // &:hover ~ li:nth-child(1) { @include transform(scale(.85) translateY(6%) rotate(0deg)); }
+                // &:hover ~ li:nth-child(2) { @include transform(scale(.9) translateY(12%) translateX(-20%)); }
+                // &:hover ~ li:nth-child(3) { @include transform(scale(.95) translateY(18%) translateX(-40%)); }
+                // &:hover ~ li:nth-child(5) { @include transform(scale(.95) translateY(28%) translateX(-80%)); }
+
+            }
+
+            &:nth-child(5) {
+                z-index: 600;
+                @include transform(translateY(60%) translateX(-52%));
+                //&:hover { @include transform(translateY(60%) translateX(-84%) perspective(2000px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(2deg)); }
+                // &:hover ~ li:nth-child(1) { @include transform(scale(.8) translateY(6%) rotate(0deg)); }
+                // &:hover ~ li:nth-child(2) { @include transform(scale(.85) translateY(12%) translateX(-20%)); }
+                // &:hover ~ li:nth-child(3) { @include transform(scale(.9) translateY(18%) translateX(-40%)); }
+                // &:hover ~ li:nth-child(4) { @include transform(scale(.95) translateY(24%) translateX(-60%)); }
+            }
+
+        }
+
+        > ul:hover {
+
+            // > li:nth-child(1) { @include transform(translateY(6%) translateX(0%) perspective(700px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(0deg)); }
+
+            // > li:nth-child(2) { @include transform(translateY(12%) translateX(-20%) perspective(700px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(0deg)); }
+
+            // > li:nth-child(3) { @include transform(translateY(18%) translateX(-40%) perspective(700px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(0deg)); }
+
+            // > li:nth-child(4) { @include transform(translateY(24%) translateX(-60%) perspective(700px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(0deg)); }
+
+            // > li:nth-child(5) { @include transform(translateY(28%) translateX(-80%) perspective(700px) rotate(0deg) rotateX(0deg) rotateY(20deg) rotateZ(0deg)); }
+        }
+    }
+}
