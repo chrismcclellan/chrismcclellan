@@ -75,8 +75,8 @@ $breakpoints: (
   small: 0,
   medium: 640px,
   large: 1024px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
+  xlarge: 1480px,
+  xxlarge: 1620px,
 );
 $breakpoint-classes: (small medium large);
 
@@ -163,12 +163,12 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
-$lead-lineheight: 1.6;
-$subheader-lineheight: 1.4;
+$lead-font-size: $global-font-size * 1.35;
+$lead-lineheight: 1.75;
+$subheader-lineheight: 1.5;
 $subheader-color: $dark-gray;
 $subheader-font-weight: $global-weight-normal;
-$subheader-margin-top: 0.2rem;
+$subheader-margin-top: 0.33rem;
 $subheader-margin-bottom: 0.5rem;
 $stat-font-size: 2.5rem;
 
@@ -300,7 +300,7 @@ $dropdown-sizes: (
 // -----------------
 
 $dropdownmenu-arrows: true;
-$dropdownmenu-arrow-color: $anchor-color;
+$dropdownmenu-arrow-color: $secondary-color; // $anchor-color;
 $dropdownmenu-min-width: 200px;
 $dropdownmenu-background: $white;
 $dropdownmenu-border: 1px solid $medium-gray;
@@ -385,7 +385,7 @@ $offcanvas-transition-timing: ease;
 $offcanvas-fixed-reveal: true;
 $offcanvas-exit-background: rgba($white, 0.25);
 $maincontent-class: 'off-canvas-content';
-$maincontent-shadow: 0 0 10px rgba($black, 0.5);
+$maincontent-shadow: 0 none; // 0 0 10px rgba($black, 0.5);
 
 // 24. Orbit
 // ---------
@@ -542,8 +542,8 @@ $tooltip-radius: $global-radius;
 // 35. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-padding: rem-calc(20) rem-calc(40);
+$topbar-background: $white;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 

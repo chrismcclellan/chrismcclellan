@@ -1,0 +1,43 @@
+#footer {
+    padding: 60px;
+    font-size: 18px;
+
+    .copyright {
+        padding: 0;
+        float: right;
+        display: inline-block;
+        line-height: 1em;
+        margin-left: 36px;
+        vertical-align: baseline;
+    }
+
+    .social-links {
+        padding: 0;
+        float: right;
+        display: inline-block;
+        line-height: 1em;
+        vertical-align: baseline;
+
+        li {
+            white-space: nowrap;
+            display: inline-block;
+            float: left;
+            margin-right: 24px;
+
+            &:last-child { margin-left: 0; }
+
+            > a,
+            > span {
+                line-height: 1em;
+                color: $black;
+                border-bottom: 1px dotted $black;
+            }
+
+            &.telegram:hover:before {
+                content: 'Copy & Paste it \219D';
+                margin-right: 8px;
+                color: $color-orange;
+            }
+        }
+    }
+}
