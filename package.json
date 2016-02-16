@@ -42,6 +42,7 @@
   "devDependencies": {
     "forever": "^0.15.1",
     "grunt-contrib-compass": "^1.0.4",
+    "html-minifier": "^1.1.1",
     "imports-loader": "^0.6.5",
     "motion-ui": "^1.2.0",
     "script-loader": "^0.6.1"
