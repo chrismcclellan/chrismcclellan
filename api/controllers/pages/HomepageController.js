@@ -48,16 +48,18 @@ module.exports = {
 
                     // minify
                     var minified = require('html-minifier').minify(html, {
+                        collapseWhitespace: true,
                         removeComments: true,
                         removeTagWhitespace: true,
                         removeEmptyAttributes: true,
                         caseSensitive: true,
-                        removeAttributeQuotes: true
-                    }, function() {
-                        console.log('callback');
+                        removeAttributeQuotes: true,
+                        keepClosingSlash: true,
+                        preventAttributesEscaping: true,
+                        minifyJS: true
                     });
 
-                    // console.log('minify', minfied);
+                    console.log('minify', minified);
 
                     // write to index.html
                     fs.writeFile(path.join(__dirname, '../../../index.html'), minified, 'utf8', function (err) {
