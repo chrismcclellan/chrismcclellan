@@ -1,0 +1,32 @@
+.nerd {
+    position: relative;
+    @include breakpoint(small) { display: none; }
+    @include breakpoint(large) { display: block; }
+
+    figure {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    figure:before {
+        content: 'One request to rule them all...';
+        display: block;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        font-size: rem-calc(60);
+        color: $black;
+        padding: 40px;
+        font-weight: bold;
+        z-index: 11111;
+        @include breakpoint(small) { font-size: rem-calc(30); }
+        @include breakpoint(large) { font-size: rem-calc(40); }
+        @include breakpoint(xlarge) { font-size: rem-calc(50); }
+        @include breakpoint(xxlarge) { font-size: rem-calc(80); }
+        @include transform(translateY(-50%));
+    }
+}
