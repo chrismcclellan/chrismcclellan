@@ -1,4 +1,4 @@
-# Munchies (A Spoon sails.js app)
+# chrismcclellan (A sails.js app)
 
 ## Requirements
 
@@ -16,14 +16,14 @@ cd ~\code
 
 Clone the repository to your local dev environment
 ```bash
-git clone git@github.com:spoonuniversity/munchies.git
+git clone git@github.com:chrismcclellan/chrismcclellan.git
 ```
 
 ## Development
 
 Navigate to your newly cloned repository
 ```bash
-cd munchies
+cd chrismcclellan
 ```
 
 While working on your project, run the following commands:
